@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.nio.charset.Charset;
@@ -20,6 +21,15 @@ import java.util.Date;
 public class TestController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+
+    @RequestMapping("/sho")
+    @ResponseBody
+    public String testGlobalException(){
+//        int a = 5 / 0;
+        int[] a = new int[3];
+        System.out.println(a[3]);
+        return "show";
+    }
 
     @RequestMapping("/showman")
     public Object showMan(){
