@@ -14,8 +14,8 @@ import java.util.Date;
 @Component
 public class MyJob {
 
-    @Scheduled(fixedRate = 1000)//每隔一秒执行一次
-    public void run(){
-        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-    }
+//    @Scheduled(fixedRate = 1000)//每隔一秒执行一次
+//    public void run(){
+//        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
+//    }
 }

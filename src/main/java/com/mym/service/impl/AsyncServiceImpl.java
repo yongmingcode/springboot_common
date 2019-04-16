@@ -1,6 +1,6 @@
-package com.mym.service;
+package com.mym.service.impl;
 
-import com.mym.service.impl.AsyncService;
+import com.mym.service.AsyncService;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.AsyncResult;
 import org.springframework.stereotype.Service;

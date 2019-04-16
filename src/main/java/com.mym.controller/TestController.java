@@ -1,7 +1,7 @@
 package com.mym.controller;
 
-import com.mym.domain.Persion;
-import com.mym.service.impl.AsyncService;
+import com.mym.domain.User;
+import com.mym.service.AsyncService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,8 +63,8 @@ public class TestController {
     //测试JackSon
     @RequestMapping("/showman")
     public Object showMan(){
-        Persion persion = new Persion();
-        persion.setDate(new Date());
+        User persion = new User();
+        persion.setBirthday(new Date());
         persion.setId(12);
         persion.setName("大明");
         return  persion;
