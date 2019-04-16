@@ -13,6 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.List;
@@ -26,6 +27,7 @@ import java.util.List;
 //@ComponentScan("com.mym.controller")//配置扫描范围-被组合注解替代
 @SpringBootApplication(scanBasePackages = {"com.mym"})//组合注解，默认扫描当前包及其子包
 @EnableAsync//开启异步执行
+@EnableScheduling//开启任务调度
 public class SpringApplications { //第一种使用FastJson的配置方法 extends WebMvcConfigurerAdapter{
 
     public static void main(String[] args){
