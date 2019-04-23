@@ -4,6 +4,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 import com.mym.controller.SpringController;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -26,6 +27,7 @@ import java.util.List;
 //@EnableAutoConfiguration//启用启动配置-被组合注解替代
 //@ComponentScan("com.mym.controller")//配置扫描范围-被组合注解替代
 @SpringBootApplication(scanBasePackages = {"com.mym"})//组合注解，默认扫描当前包及其子包
+@MapperScan("com.mym.mapper")//扫描mapper
 @EnableAsync//开启异步执行
 @EnableScheduling//开启任务调度
 public class SpringApplications { //第一种使用FastJson的配置方法 extends WebMvcConfigurerAdapter{

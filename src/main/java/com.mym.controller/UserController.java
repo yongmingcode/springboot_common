@@ -30,4 +30,15 @@ public class UserController {
 
         return "success";
     }
+
+    @RequestMapping("/addmybatisuser")
+    public String addMybatisUser(){
+        User user = new User();
+        user.setName("小明");
+        user.setSex(0);
+        user.setBirthday(new Date());
+
+        userService.addMybatisUser(user);
+        return "success";
+    }
 }
