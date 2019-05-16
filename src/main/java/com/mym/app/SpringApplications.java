@@ -26,7 +26,7 @@ import java.util.List;
  */
 //@EnableAutoConfiguration//启用启动配置-被组合注解替代
 //@ComponentScan("com.mym.controller")//配置扫描范围-被组合注解替代
-@SpringBootApplication(scanBasePackages = {"com.mym"})//组合注解，默认扫描当前包及其子包
+@SpringBootApplication(scanBasePackages ="com.mym")//组合注解，默认扫描当前包及其子包
 @MapperScan("com.mym.mapper")//扫描mapper
 @EnableAsync//开启异步执行
 @EnableScheduling//开启任务调度
